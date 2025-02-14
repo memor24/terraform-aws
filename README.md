@@ -7,8 +7,7 @@ export AWS_ACCESS_KEY_ID="your-access-key-id"
 export AWS_SECRET_ACCESS_KEY="your-secret-access-key"
 ```
 
-Or use Localstack for testing: \
-[link to multicloud/devtools repo]
+For development or testing, use an AWS sandbox or LocalStack [link].
 
 
 Then use Terraform to create and manage the services:
