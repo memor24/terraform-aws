@@ -1,10 +1,10 @@
-output db_instance_arn {
-  value       = module.db.db_instance_arn
-  description = "The ARN of the RDS instance"
+output "dynamodb_table_id" {
+  value       = "module.dynamodb_table.dynamodb_table_id"
+  description = "ID of the DynamoDB table"
 }
 
-output db_instance_endpoint {
-  value       = module.db.db_instance_endpoint
-  description = "The connection endpoint"
+output "dynamodb_table_arn" {
+  value       = "module.dynamodb_table.dynamodb_table_arn"
+  description = "ARN of the DynamoDB table"
 }
 
