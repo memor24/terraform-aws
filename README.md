@@ -19,4 +19,4 @@ terraform apply
 
 terraform destroy
 ```
-For testing, you may also use localstack
+For testing, you may also use [localstack](https://github.com/memor24/terraform-aws/tree/main/localstack)
