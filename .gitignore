@@ -13,6 +13,7 @@ images/
 test_env_terraforms/
 
 
+
 # Ignore Terraform working directories
 .terraform/
 
@@ -29,6 +30,7 @@ terraform.tfstate.backup
 # Ignore Node.js related files
 node_modules/
 npm-debug.log
+
 yarn-error.log
 
 # Ignore TypeScript compilation output
@@ -52,3 +54,56 @@ Thumbs.db
 # Ignore SQLite database files
 *.sqlite
 *.db
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore lock files (if using Terraform Cloud or Terraform Enterprise)
+.terraform.lock.hcl
+
+# Ignore plan output files
+*.tfplan
+
+# Ignore directory for downloaded providers
+.terraform/providers/
+
+# Ignore directory for modules cache
+.terraform/modules/
+
+# Ignore local CLI backup files
+*.backup
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore local environment files
+.env
+.env.local
+
+# Ignore any custom files or directories
+*.log
+*.zip
