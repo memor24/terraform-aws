@@ -1,7 +1,8 @@
 #####  IAM Role vars ########
-variable "role_name" {
+variable "iam_role_name" {
   description = "The name of the role"
   type        = string
+  default="ec2_role"
 }
 
 
