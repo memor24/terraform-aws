@@ -6,10 +6,12 @@ services:
       - "127.0.0.1:4566:4566" # localstack gateway
       - "4566-4599:4566-4599" # aws services port range
     environment:
-      - SERVICES=s3, dynamodb, lambda, sqs, cloudwatch, ec2, 
+      - SERVICES=s3, dynamodb, lambda, sns, sqs, cloudwatch, ec2, iam, ecr, eks, rds, secretsmanager 
       - DEBUG=1
       - DATA_DIR=/tmp/localstack/data
-      - PORT_WEB_UI=8080
+      #- PORT_WEB_UI=8080
+      - LOCALSTACK_HOST=localstack    # Hostname for the web interface
+      - EDGE_PORT=4566                # Port for the web interface
     volumes:
-      - "${LOCALSTACK_DATA_DIR:-./.localstack}:/tmp/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./localstack_data:/tmp/localstack/data
+  
