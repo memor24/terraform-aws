@@ -20,19 +20,19 @@ module security_group {
   vpc_id = module.vpc.vpc_id
 
   ingress_cidr_blocks = [
-    {   cidr10.0.0.0/16       # allows traffic within the vpc 
+    {   cidr=10.0.0.0/16       # allows traffic within the vpc 
         from_port = 9092
         to_port = 9092
         protocol = "tcp"
         description = "kafka" # for streaming and processing data
     },
-    {   cidr10.0.0.0/16        
+    {   cidr=10.0.0.0/16        
         from_port = 2181
         to_port = 2181
         protocol = "tcp"
         description = "zookeeper" # for control and metadata management
     },
-    {   cidr10.0.0.0/16        
+    {   cidr=10.0.0.0/16        
         from_port = 22
         to_port = 22
         protocol = "tcp"
@@ -40,8 +40,8 @@ module security_group {
     }
     ]
   egress_cidr_blocks = [
-    {   cidr0.0.0.0/0       # to be limited for security
-        from_port = 0       # to be limited for security
+    {   cidr= var.cidr_block    # to be limited for security
+        from_port = 0           # to be limited for security
         to_port = 0
         protocol = "-1"
         description = "all"
