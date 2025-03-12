@@ -1,3 +1,4 @@
+############
 terraform {
   required_version = ">= 1.0"
 
@@ -12,8 +13,7 @@ terraform {
 provider aws {
     region = "us-west-2"
   }
-
-
+############
 resource "aws_ecr_repository" "new_ecr_repo" {
   name = "my-ecr"
 
@@ -30,7 +30,7 @@ resource "aws_ecr_repository" "new_ecr_repo" {
     Project = "terraform-aws"
   }
 }
-
+##########
 output "ecr_repo_url" {
   value = aws_ecr_repository.new_ecr_repo.repository_url
 }
