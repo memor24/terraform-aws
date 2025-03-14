@@ -18,7 +18,5 @@ tflocal destroy
 
 docker rm [container_id]
 ```
-Or use docker compose from [here](https://github.com/devopshobbies/aws-localstack-lab/tree/main):
-```
-docker-compose up
-```
+Or use the local stack docker compose from [here](https://github.com/devopshobbies/aws-localstack-lab/tree/main)
+
